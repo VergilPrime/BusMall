@@ -30,6 +30,15 @@ ul {
   justify-content: space-around;
 }
 
+form[id="game"]>div {
+  width: 250px;
+  text-align: right;
+}
+
+form[id="game"]>div>section {
+  display: inline-block;
+}
+
 button {
   width: 100px;
   align-self: center;

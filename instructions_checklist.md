@@ -20,3 +20,8 @@ Goals and Object Design
 
 Green: rgb(179,214,113)
 Blue: rgb(0,183,241)
+
+### Todo:
+
+  >1. event listener
+  >2. track track stuff
