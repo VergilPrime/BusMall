@@ -15,3 +15,8 @@ Goals and Object Design
 ### Stretch Goals
 
   >1. Free refresh button
+
+![Layout](https://i.imgur.com/rZtM9jV.png)
+
+Green: rgb(179,214,113)
+Blue: rgb(0,183,241)

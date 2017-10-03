@@ -1,20 +1,23 @@
-strict;
+'use strict';
 
 //make an object
 //randomly display one picture
 //listener, sometjomg tl click on
 
-function Image(naame,filepath){
+var imagePool = [];
+
+function Item(name,filepath){
   this.name = name;
   this.filepath = filepath;
-  Image.allGoats.push(this);
+  imagePool.push(self);
+
 }
 
-new Image('','images/.jpg');
-new Image('','images/.jpg');
-new Image('','images/.jpg');
-new Image('','images/.jpg');
-new Image('','images/.jpg');
+new Image('','resources/.jpg');
+new Image('','resources/.jpg');
+new Image('','resources/.jpg');
+new Image('','resources/.jpg');
+new Image('','resources/.jpg');
 
 var imgElement = document.getElementById('goat-pic');
 imgElement.addEventListener('click', randomImage);
