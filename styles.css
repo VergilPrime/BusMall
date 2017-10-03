@@ -30,16 +30,29 @@ ul {
   justify-content: space-around;
 }
 
-form[id="game"]>div {
+/*form[id="game"]>div {
   width: 250px;
   text-align: right;
 }
 
 form[id="game"]>div>section {
   display: inline-block;
+}*/
+
+section {
+  text-align: right;
 }
 
 button {
   width: 100px;
   align-self: center;
+}
+p {
+  display: inline-block;
+  padding: 15px;
+}
+
+div[id="skip"] {
+  text-align: right;
+  width: 70%;
 }

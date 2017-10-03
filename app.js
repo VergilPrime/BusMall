@@ -24,11 +24,6 @@ Item.slot3 = document.getElementById('slot3');
 
 console.log( 'Defining Item constructer.' );
 function Item(name,filepath){
-  console.log( 'Checking' + name + ' against Item.pool to see if it already exists. ' );
-  if(Item.duplicateCheck(name,'Pool')) {
-    console.log('The item ' + name + ' already exists!');
-    die();
-  }
   this.name = name;
   this.filepath = filepath;
   this.seen = 0;
@@ -36,44 +31,35 @@ function Item(name,filepath){
   Item.pool.push(this);
 }
 
-Item.prototype.duplicateCheck = function(itemName, pool) {
-  if(pool === 'Pool') {
-    for(n = 0; n < Item.pool.length; n++) {
-      if(itemName === recentPool1[n]) {
-        return(true);
-      };
+Item.duplicateCheck = function(itemName) {
+  for(var n = 0; n < Item.recentPool1.length; n++) {
+    if(itemName === recentPool1[n]) {
+      return(true);
     };
   };
-  if (pool === 'recentPool') {
-    for(n = 0; n < Item.recentPool1.length; n++) {
-      if(itemName === recentPool1[n]) {
-        return(true);
-      };
-    };
-    for(n = 0; n < Item.recentPool2.length; n++) {
-      if(itemName === recentPool2[n]) {
-        return(true);
-      };
+  for(n = 0; n < Item.recentPool2.length; n++) {
+    if(itemName === recentPool2[n]) {
+      return(true);
     };
   };
   return(false);
 };
 
 // displayItems function added to Item constructer
-Item.prototype.displayItems = function() {
-  for(i = 3; i > 0; i--) {
+Item.displayItems = function() {
+  for(var i = 3; i > 0; i--) {
     // get a random element
     var itemIndex = random(0,Item.pool.length);
     var item = Item.pool[itemIndex];
-    if(Item.duplicateCheck(name,'recentPool')) {
+    if(Item.duplicateCheck(name)) {
       con.log(item[name] + 'has been used too recently.');
     } else {
       if(i === 1) {
-        slot1.src = Item.pool.itemIndex.filepath;
+        slot1.src = Item.pool[itemIndex].filepath;
       } else if(i === 2) {
-        slot2.src = Item.pool.itemIndex.filepath;
+        slot2.src = Item.pool[itemIndex].filepath;
       } else if(i === 3) {
-        slot3.src = Item.pool.itemIndex.filepath;
+        slot3.src = Item.pool[itemIndex].filepath;
       } else {
         console.log('Something went terribly wrong in the "for each slot" loop.');
       }
@@ -83,7 +69,7 @@ Item.prototype.displayItems = function() {
 };
 
 new Item('Bag','resources/bag.jpg');
-new Item('Bananna','resources/bananna.jpg');
+new Item('Bananna','resources/banana.jpg');
 new Item('Bathroom','resources/bathroom.jpg');
 new Item('Bendycharge','resources/bendcharge.jpg');
 new Item('Breakfast','resources/breakfast.jpg');
