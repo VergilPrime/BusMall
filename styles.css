@@ -25,34 +25,42 @@ h5 {
 }
 
 ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 40px;
 }
 
-/*form[id="game"]>div {
-  width: 250px;
-  text-align: right;
+li {
+  padding-left: 10%;
+  margin: 0;
+  display: inline;
 }
 
-form[id="game"]>div>section {
-  display: inline-block;
-}*/
+img {
+  height: 350px;
+  width: 20%;
+}
+
+img {
+  height: 350px;
+  width: 20%;
+}
 
 section {
   text-align: right;
 }
 
 button {
-  width: 100px;
+  width: 250px;
+  height: 60px;
   align-self: center;
 }
+
 p {
   display: inline-block;
   padding: 15px;
 }
 
-div[id="skip"] {
+div[id="button"] {
   text-align: right;
   width: 70%;
 }
