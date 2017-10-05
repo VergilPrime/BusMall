@@ -85,12 +85,35 @@ Item.displayItems = function() {
   };
 };
 
-new Item('Bag','resources/bag.jpg');
-new Item('Bananna','resources/banana.jpg');
-new Item('Bathroom','resources/bathroom.jpg');
-new Item('Bendycharge','resources/bendycharge.jpg');
-new Item('Breakfast','resources/breakfast.jpg');
-new Item('Bubblegum','resources/bubblegum.jpg');
+new Item('R2D2 Bag','resources/bag.jpg');
+new Item('Banana','resources/banana.jpg');
+new Item('Ipad Caddy','resources/bathroom.jpg');
+new Item('Charger Stand','resources/bendycharge.jpg');
+new Item('Stupid Boots','resources/boots.jpg');
+new Item('Breakfast Cooker','resources/breakfast.jpg');
+new Item('Meatball Gum','resources/bubblegum.jpg');
+new Item('Butt Biscuits','resources/buttbiscuit.jpg');
+new Item('Butter Gun','resources/corngun.jpg');
+new Item('Stupid Chair','resources/chair.jpg');
+new Item('Č̻̼̦͚͔̇̉ͬt̩̬ͬͮ̈̂̔͌͞h͚̪ͤͭ̅̄ͧu̴ͦ̍l̡͍̗͎̤̼͚̒̽͑ǘ̩͎͔̮̳̪̐͛ͯ̓̈ͪ̕ ̱̬͗̽͌̾̇ͮ̌D̆̐̌ͥ̋̎҉̻͎ǫ͍̫ͤl̳̪̼̺͛̊ͅḷ̭̫̙̺̹̮͂ͤ̑','resources/cthulhu.jpg');
+new Item('DuckDog','resources/dog-duck.jpg');
+new Item('Dragon Meat','resources/dragon.jpg');
+new Item('Child Protectiver Field','resources/forcefield.jpg');
+new Item('Gummi Corn','resources/gummicorn.png');
+new Item('Stupid Pen','resources/pen.jpg');
+new Item('Handa','resources/handipanda.jpg');
+new Item('Chilly Juice','resources/penguinbox.jpg');
+new Item('Pet Sweep','resources/pet-sweep.jpg');
+new Item('Pizza Shears','resources/scissors.jpg');
+new Item('Clown Mask','resources/serialkillermask.png');
+new Item('Shark Joke','resources/shark.jpg');
+new Item('Baby Joke','resources/sweep.png');
+new Item('Star Wars Joke','resources/tauntaun.jpg');
+new Item('Unicorn Meat','resources/unicorn.jpg');
+new Item('Tentacle Stick','resources/usb.gif');
+new Item('Art','resources/water-can.jpg');
+new Item('Stupid Wine Glass','resources/wine-glass.jpg');
+
 
 Item.displayItems();
 //listener should listen for any of the three slots, from there I can grab the item name and trigger the frefresh.
