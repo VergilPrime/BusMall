@@ -64,3 +64,7 @@ div[id="button"] {
   text-align: right;
   width: 70%;
 }
+
+canvas {
+  background-color: red;
+}
