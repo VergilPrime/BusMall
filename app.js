@@ -134,6 +134,7 @@ Item.clickHandler = function(event) {
         for(var i = 0; i < Item.pool.length; i++){
           if(Item.pool[i].name === event.target.alt){
             Item.pool[i].clicked++;
+            if(debug){console.log(Item.pool[i].name + ' has been clicked ' + Item.pool[i].clicked + ' times.');}
             break;
           }
         }
@@ -142,6 +143,32 @@ Item.clickHandler = function(event) {
         localStorage.pool = JSON.stringify(Item.pool);
         Item.main.removeEventListener('click', Item.clickHandler);
         Item.main.innerHTML = '';
+        if(debug){console.log('creating canvas');}
+        Item.canvas = document.createElement('canvas');
+        Item.canvas.setAttribute('id','canvas');
+        Item.canvas.setAttribute('width','600');
+        Item.canvas.setAttribute('height','480');
+        Item.main.appendChild(Item.canvas);
+        var labels = [];
+        var dataset = [];
+        for(i = 0; i < Item.pool.length; i++){
+          labels.push(Item.pool[i].name);
+          dataset.push(Item.pool[i].clicks);
+        }
+        var ctx = Item.canvas.getContext('2d');
+        if(debug){console.log('chaaaaart');}
+        new Chart(ctx,{
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets:[{
+              label: 'Intrest Ratio',
+              backgroundColor: 'rgb(179,214,113)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: dataset
+            }]
+          }
+        });
       }
     }
   }
